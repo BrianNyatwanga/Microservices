@@ -1,50 +1,54 @@
-#server:
-#  port: 8086
-#spring:
-#  datasource:
-#    url: jdbc:h2:mem:testdb
-#    driverClassName: org.h2.Driver
-#    username: sa
-#    password: ''
-#  h2:
-#    console:
-#      enabled: true
-#  jpa:
-#    database-platform: org.hibernate.dialect.H2Dialect
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: true
 server:
-  port: 8085
-  address:
-
+  port: 8080
 spring:
-  application:
-    useOTP: false
-    otpProd: false
-    otpTestMail: tkilunda@emtechhouse.co.ke
-    name: EazzyBanking
-
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
-
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
-      use-new-id-generator-mappings: false
-    show-sql: false
-
-    properties:
-      hibernate:
-        format_sql: true
-  #        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-
-  datasource:
-
-    #
-    url:  jdbc:mariadb://localhost/accounts_db
-    username: root
-    password:
-
-    driverClassName: org.mariadb.jdbc.Driver
+    show-sql: true
+#server:
+#  port: 8085
+#  address:
+#
+#spring:
+#  application:
+#    useOTP: false
+#    otpProd: false
+#    otpTestMail: tkilunda@emtechhouse.co.ke
+#    name: EazzyBanking
+#
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#      use-new-id-generator-mappings: false
+#    show-sql: false
+#
+#    properties:
+#      hibernate:
+#        format_sql: true
+#  #        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#
+#  datasource:
+#
+#    #
+#    url:  jdbc:mariadb://localhost/accounts_db
+#    username: root
+#    password:
+#
+#    driverClassName: org.mariadb.jdbc.Driver
+#springdoc:
+#  swagger-ui:
+#    path: /api-docs  # Set a custom path for Swagger UI (optional)
+#    configurationUrl: "http://localhost:8080/api-docs"
